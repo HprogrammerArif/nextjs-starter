@@ -21,7 +21,7 @@
     "db-server:file": "pglite-server -p 5433 -m 100 --db=local.db --run=\"node node_modules/dotenv-cli/cli.js -c -- node node_modules/drizzle-kit/bin.cjs migrate\"",
     "db-server:memory": "pglite-server -p 5433 -m 100 --run=\"node node_modules/dotenv-cli/cli.js -c -- node node_modules/drizzle-kit/bin.cjs migrate\"",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "dotenv -c -- drizzle-kit migrate",
+    "db:migrate": "dotenv -c -- node scripts/db-migrate.js",
     "db:studio": "drizzle-kit studio",
     "storybook": "storybook dev -p 6006",
     "storybook:test": "vitest run --config .storybook/vitest.config.ts",
