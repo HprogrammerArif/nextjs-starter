@@ -9,6 +9,7 @@ const config: KnipConfig = {
     '@swc/helpers', // Avoid error in CI: "`npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync."
     'vite',
     '@hookform/resolvers',
+    'sharp', // Implicitly used by Next.js image optimization pipeline; never imported directly
     'vitest-browser-react'
   ],
   // Include custom Playwright test file suffixes
